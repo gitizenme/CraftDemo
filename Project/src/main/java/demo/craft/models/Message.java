@@ -15,7 +15,8 @@ import java.util.Date;
 public class Message extends AuditModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(updatable = false, nullable = false)
     private Long id;
 
     @Column(nullable = false)
@@ -30,6 +31,15 @@ public class Message extends AuditModel {
 
     @Column(name = "is_new")
     private boolean isNew = true;
+
+    public Message() {
+    }
+
+    public Message(@Size(max = 240) String message, User user, boolean isNew) {
+        this.message = message;
+        this.user = user;
+        this.isNew = isNew;
+    }
 
     public Long getId() {
         return id;

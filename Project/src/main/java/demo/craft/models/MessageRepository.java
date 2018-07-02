@@ -2,9 +2,9 @@ package demo.craft.models;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface MessageRepository extends CrudRepository<Message, Long> {
+public interface MessageRepository extends JpaRepository<Message, Long> {
 
     Page<Message> findByUserId(Long userId, Pageable pageable);
 }

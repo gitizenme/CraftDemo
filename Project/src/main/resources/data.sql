@@ -6,22 +6,3 @@ INSERT INTO users (id, userid, username, created_at) VALUES (5, 'cn=slash/guy,ou
 INSERT INTO users (id, userid, username, created_at) VALUES (6, 'cn=quote\"guy,ou=\"quoted people\",dc=craftdemo,dc=org', 'quoteguy', NOW());
 INSERT INTO users (id, userid, username, created_at) VALUES (7, 'space cadet,ou=space cadets,dc=craftdemo,dc=org', 'spacecadet', NOW());
 
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(1, 'This is a test message', 1, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(2, 'This is a test message', 1, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(3, 'This is a test message', 2, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(4, 'This is a test message', 2, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(5, 'This is a test message', 3, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(6, 'This is a test message', 3, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(7, 'This is a test message', 3, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(9, 'This is a test message', 4, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(10, 'This is a test message', 4, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(11, 'This is a test message', 5, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(12, 'This is a test message', 5, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(13, 'This is a test message', 5, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(14, 'This is a test message', 6, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(15, 'This is a test message', 6, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(16, 'This is a test message', 6, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(17, 'This is a test message', 7, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(18, 'This is a test message', 7, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(19, 'This is a test message', 7, true, NOW());
-INSERT INTO messages (id, message, user_id, is_new, created_at) VALUES(20, 'This is a test message', 7, true, NOW());

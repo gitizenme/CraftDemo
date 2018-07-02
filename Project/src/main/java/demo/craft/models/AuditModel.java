@@ -1,6 +1,7 @@
 package demo.craft.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -15,8 +16,8 @@ import java.util.Date;
 )
 public abstract class AuditModel implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at", nullable = false, insertable = false, updatable = false)
-    @CreatedDate
+    @Column(name = "created_at", updatable = false)
+    @CreationTimestamp
     private Date createdAt;
 
     public Date getCreatedAt() {
