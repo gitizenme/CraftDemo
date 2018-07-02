@@ -1,4 +1,4 @@
-package demo.craft.model;
+package demo.craft.models;
 
 import demo.craft.Application;
 

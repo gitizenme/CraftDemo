@@ -1,4 +1,4 @@
-package demo.craft.controller;
+package demo.craft.controllers;
 
 public class FeedController {
 }

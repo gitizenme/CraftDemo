@@ -1,6 +1,6 @@
 package demo.craft;
 
-import demo.craft.controller.CraftController;
+import demo.craft.controllers.CraftController;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
