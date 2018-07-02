@@ -19,8 +19,8 @@ public class RestApiTests {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void greetingShouldReturnDefaultMessage() throws Exception {
-        Assert.assertNotNull(this.restTemplate.getForObject("http://localhost:" + port + "/",
+    public void pingApiTest() throws Exception {
+        Assert.assertNotNull(this.restTemplate.getForObject("http://localhost:" + port + "/ping",
                 String.class));
     }
 }
