@@ -10,5 +10,7 @@ public interface IAuthenticationService {
 
     String currentUserName();
 
+    String currentUserId();
+
     void logout(HttpServletRequest request, HttpServletResponse response);
 }

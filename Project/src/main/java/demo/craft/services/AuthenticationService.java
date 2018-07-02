@@ -2,6 +2,7 @@ package demo.craft.services;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.ldap.userdetails.LdapUserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +19,12 @@ public class AuthenticationService implements IAuthenticationService {
     @Override
     public String currentUserName() {
         return getAuthentication().getName();
+    }
+
+    @Override
+    public String currentUserId() {
+        LdapUserDetails user = (LdapUserDetails) getAuthentication().getPrincipal();
+        return user.getDn();
     }
 
     @Override

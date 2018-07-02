@@ -52,7 +52,7 @@ objectclass: inetOrgPerson
 cn: Bob Hamilton
 sn: Hamilton
 uid: bob
-userPassword: bobspassword
+userPassword: {SHA}s6ShDHKfjIjUNfTaWwLopI2QG74=
 
 dn: uid=joe,ou=otherpeople,dc=craftdemo,dc=org
 objectclass: top
@@ -62,7 +62,7 @@ objectclass: inetOrgPerson
 cn: Joe Smeth
 sn: Smeth
 uid: joe
-userPassword: joespassword
+userPassword: {SHA}E8WgUNkYdcGF6O5ST8Vsc0YtzV4=
 
 dn: cn=mouse\, jerry,ou=people,dc=craftdemo,dc=org
 objectclass: top
@@ -72,7 +72,7 @@ objectclass: inetOrgPerson
 cn: Mouse, Jerry
 sn: Mouse
 uid: jerry
-userPassword: jerryspassword
+userPassword: {SHA}LwVpInPiNiMIO3hdGMtYiqELZ3k=
 
 dn: cn=slash/guy,ou=people,dc=craftdemo,dc=org
 objectclass: top
@@ -82,7 +82,7 @@ objectclass: inetOrgPerson
 cn: slash/guy
 sn: Slash
 uid: slashguy
-userPassword: slashguyspassword
+userPassword: {SHA}1xksz99LHyYBqQTzIiiZbhph+fk=
 
 dn: cn=quote\"guy,ou=\"quoted people\",dc=craftdemo,dc=org
 objectclass: top
@@ -92,7 +92,7 @@ objectclass: inetOrgPerson
 cn: quote\"guy
 sn: Quote
 uid: quoteguy
-userPassword: quoteguyspassword
+userPassword: {SHA}sskX5Ip9SqEPz/Jc78/x37fBnjA=
 
 dn: uid=space cadet,ou=space cadets,dc=craftdemo,dc=org
 objectclass: top
@@ -101,9 +101,8 @@ objectclass: organizationalPerson
 objectclass: inetOrgPerson
 cn: Space Cadet
 sn: Cadet
-uid: space cadet
-userPassword: spacecadetspassword
-
+uid: spacecadet
+userPassword: {SHA}yKphhUePk69zfMj0a/rbaTRvmiQ=
 
 
 dn: cn=developers,ou=groups,dc=craftdemo,dc=org

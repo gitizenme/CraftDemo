@@ -4,7 +4,7 @@ import demo.craft.Application;
 
 import java.util.Date;
 
-public class PingResponse {
+public class Ping {
 
     private final Date timestamp = new Date();
 
