@@ -1,6 +1,8 @@
 package demo.craft.controller;
 
 import demo.craft.model.PingResponse;
+import demo.craft.services.IAuthenticationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.ldap.userdetails.LdapUserDetails;
@@ -25,6 +27,9 @@ public class CraftController {
 
     private static final Logger logger = Logger.getLogger(CraftController.class.getName());
 
+    @Autowired
+    private IAuthenticationService authenticationService;
+
     @RequestMapping(value = "/", method = GET)
     @ResponseBody
     public String index(Authentication authentication) {
@@ -35,12 +40,11 @@ public class CraftController {
     }
 
     @RequestMapping(value = "/logout", method = GET)
-    public RedirectView logout(HttpServletRequest request, HttpServletResponse response, Authentication authentication, RedirectAttributes attributes)
+    public RedirectView logout(HttpServletRequest request, HttpServletResponse response, RedirectAttributes attributes)
     {
-        if(authentication != null && authentication.isAuthenticated()) {
-            new SecurityContextLogoutHandler().logout(request, response, authentication);
-            SecurityContextHolder.getContext().setAuthentication(null);
-        }
+        // logout
+        authenticationService.logout(request, response);
+        // redirect
         attributes.addFlashAttribute("flashAttribute", "redirectWithRedirectView");
         attributes.addAttribute("attribute", "redirectWithRedirectView");
         return new RedirectView("/");
